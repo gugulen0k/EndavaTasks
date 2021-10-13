@@ -1,0 +1,7 @@
+emojis: https://emojipedia.org/
+font-family: "Inter", sans-serif;
+blue-color: #1da1f2; // for buttons and some text
+blue-background-color: #d7f5f5; //for background
+light-beige-background-color: #fbf8f3; //for background
+yellow-border-color: #fce5be; //for border
+grey-font-color: #828282; //for some text
