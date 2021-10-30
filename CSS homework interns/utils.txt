@@ -5,3 +5,4 @@ blue-background-color: #d7f5f5; //for background
 light-beige-background-color: #fbf8f3; //for background
 yellow-border-color: #fce5be; //for border
 grey-font-color: #828282; //for some text
+secondary-blue-color: #1f7898; //for some text
