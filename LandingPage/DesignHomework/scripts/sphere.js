@@ -1,13 +1,13 @@
 import * as THREE from "three";
+import { TweenMax } from "gsap/all";
 
 // Three JS
-window.addEventListener("load", init, false);
-function init() {
+// window.addEventListener("load", init, false);
+export function init() {
   console.log("Init Functions");
   createWorld();
   createLights();
   createGrid();
-  // createGUI();
   createSkin();
   createLife();
 }
@@ -33,8 +33,8 @@ var groupMoon = new THREE.Object3D();
 
 //--------------------------------------------------------------------
 function createWorld() {
-  _width = window.innerWidth;
-  _height = window.innerHeight;
+  _width = 443;
+  _height = 396;
   //---
   scene = new THREE.Scene();
   scene.fog = new THREE.Fog(Theme._dark, 150, 320);
@@ -54,8 +54,8 @@ function createWorld() {
   console.log("Create world");
 }
 function onWindowResize() {
-  _width = window.innerWidth;
-  _height = window.innerHeight;
+  _width = 443;
+  _height = 396;
   renderer.setSize(_width, _height);
   camera.aspect = _width / _height;
   camera.updateProjectionMatrix();

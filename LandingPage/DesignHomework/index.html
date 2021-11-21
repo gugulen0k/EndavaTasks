@@ -4,11 +4,68 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Landing Page</title>
   </head>
   <body>
-    <canvas id="morphing-sphere"></canvas>
-    <script type="module" src="scripts/sphere.js"></script>
+    <header>
+      <div class="header-content">
+        <div class="logo-emoji"><img src="./images/emoji.png" alt="" /></div>
+        <div class="content">
+          <div class="main-header-content">
+            <span>Create high-quality assessments, fast</span>
+            <div class="features">
+              <button>
+                <img src="./images/windows.svg" alt="" /> Sign in with microsoft
+              </button>
+              <ul>
+                <li><img src="./images/icons/device-message.svg" alt="" /></li>
+                <li><img src="./images/icons/monitor-mobbile.svg" alt="" /></li>
+                <li><img src="./images/icons/building.svg" alt="" /></li>
+                <li><img src="./images/icons/graph.svg" alt="" /></li>
+                <li><img src="./images/icons/code.svg" alt="" /></li>
+              </ul>
+              <div class="description">
+                <div class="title">Test for many disciplines:</div>
+                <div class="text">Development</div>
+              </div>
+            </div>
+          </div>
+          <div class="sphere" id="morphing-sphere"></div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="cms-screens">
+        <div class="block">
+          <img class="center-img" src="./images/cms_screens/main.svg" alt="" />
+          <img
+            class="left-top-img"
+            src="./images/cms_screens/profile_card.svg"
+            alt=""
+          />
+          <img
+            class="right-top-img"
+            src="./images/cms_screens/hiring.svg"
+            alt=""
+          />
+          <img
+            class="left-bottom-img"
+            src="./images/cms_screens/quiz.svg"
+            alt=""
+          />
+          <img
+            class="right-bottom-img"
+            src="./images/cms_screens/quastion.svg"
+            alt=""
+          />
+        </div>
+      </section>
+      <section></section>
+    </main>
+
+    <script type="module" src="/main.js"></script>
+
     <script id="vertexShader" type="x-shader/x-vertex">
       void main() {
             gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
