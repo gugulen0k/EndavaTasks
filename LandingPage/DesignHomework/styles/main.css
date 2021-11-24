@@ -25,6 +25,10 @@ header .header-content {
           flex-direction: column;
 }
 
+header .header-content .logo-emoji {
+  margin-top: 20px;
+}
+
 header .header-content .content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -71,7 +75,7 @@ header .header-content .content .main-header-content .features {
           align-items: center;
 }
 
-header .header-content .content .main-header-content .features button {
+header .header-content .content .main-header-content .features #sticky-button button {
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -92,11 +96,11 @@ header .header-content .content .main-header-content .features button {
   transition: 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-header .header-content .content .main-header-content .features button img {
+header .header-content .content .main-header-content .features #sticky-button button img {
   margin-right: 10px;
 }
 
-header .header-content .content .main-header-content .features button:hover {
+header .header-content .content .main-header-content .features #sticky-button button:hover {
   background: #c0ffcd;
 }
 
@@ -168,18 +172,228 @@ header .header-content .content .main-header-content .features .description .tex
   margin-top: 5px;
 }
 
-.block {
-  width: 80%;
-  margin: 0 auto;
+.sticky {
+  position: fixed;
+  top: 2rem;
+  z-index: 100;
+}
+
+main {
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  position: relative;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fdfff6), to(#fdfff6));
+  background-image: linear-gradient(to bottom, #fdfff6, #fdfff6);
   position: relative;
 }
 
-.block .center-img {
+main::after {
+  content: "";
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 0;
+  background: radial-gradient(circle at bottom right, rgba(133, 255, 178, 0.2) 0%, rgba(133, 255, 178, 0) 50%);
+}
+
+main::before {
+  content: "";
   width: 100%;
   height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  background: url(../images/noise.svg) no-repeat;
+}
+
+main .cms-screens {
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  position: absolute;
+  top: -15%;
+}
+
+main .cms-screens .block {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  width: 80%;
+  height: 825px;
+  margin: 0 auto;
+}
+
+main .cms-screens .block .images {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+main .cms-screens .block .images img {
+  z-index: 10;
+  border-radius: 30px;
+}
+
+main .cms-screens .block .images .center-img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+main .cms-screens .block .images .left-top-img {
+  position: absolute;
+  left: -8%;
+  top: 25%;
+}
+
+main .cms-screens .block .images .left-bottom-img {
+  position: absolute;
+  left: -5%;
+  bottom: -20%;
+}
+
+main .cms-screens .block .images .right-bottom-img {
+  position: absolute;
+  bottom: -25%;
+  right: -3%;
+}
+
+main .cms-screens .block .images .right-top-img {
+  position: absolute;
+  top: 35%;
+  right: -5%;
+}
+
+main .main-content {
+  background: transparent;
+  width: 100%;
+  padding-top: 800px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  z-index: 10;
+}
+
+main .main-content img {
+  margin-bottom: 150px;
+}
+
+main .main-content .title {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-size: 48px;
+  font-weight: bold;
+  font-family: Inter, sans-serif;
+  color: #101010;
+  line-height: 56px;
+  margin-bottom: 25px;
+}
+
+main .main-content .description {
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #444444;
+}
+
+main .main-content .cards {
+  width: 90%;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .main-content .cards .card {
+  width: 443px;
+  padding: 88px 61px 44px 32px;
+}
+
+main .main-content .cards .card .icon {
+  margin-bottom: 30px;
+}
+
+main .main-content .cards .card .title {
+  width: 350px;
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+  color: #101010;
+}
+
+main .main-content .cards .card .text {
+  width: 100%;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #444444;
+}
+
+main footer {
+  padding: 10px 0px;
+  margin: 200px 40px 0 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: double 1px transparent;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(white)), -webkit-gradient(linear, left top, right top, from(#000), to(rgba(0, 0, 0, 0)));
+  background-image: linear-gradient(white, white), linear-gradient(to right, #000, rgba(0, 0, 0, 0));
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+}
+
+main footer .left,
+main footer .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+}
+
+main footer .right .email {
+  color: #757575;
+  line-height: 17px;
+  font-weight: 500;
+  text-decoration: underline;
 }
 
 *,
