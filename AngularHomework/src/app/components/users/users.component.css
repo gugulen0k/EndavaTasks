@@ -1,0 +1,33 @@
+* {
+  color: #313131;
+}
+
+.users {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.line {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.line:last-child {
+  border: none;
+}
+
+.block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+a {
+  margin-top: 20px;
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #80a5e1;
+}

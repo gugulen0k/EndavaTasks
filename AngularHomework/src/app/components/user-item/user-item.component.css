@@ -1,0 +1,9 @@
+.user {
+  padding: 10px;
+}
+
+.line {
+  display: flex;
+  gap: 5px;
+  line-height: 1.3rem;
+}

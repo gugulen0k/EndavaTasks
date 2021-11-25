@@ -1,0 +1,9 @@
+<div class="block">
+  <app-form (onAddUser)="addUser($event)"></app-form>
+  <div class="users">
+    <div class="line" *ngFor="let user of users">
+      <app-user-item [user]="user" ></app-user-item>
+    </div>
+  </div>
+</div>
+<a routerLink="/about">About</a>

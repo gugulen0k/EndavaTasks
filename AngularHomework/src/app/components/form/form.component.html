@@ -1,0 +1,20 @@
+<div class="inputs">
+  <h2>Reactive form</h2>
+
+  <form (ngSubmit)="addUser()">
+    <label for="name">
+      <span class="title">Name:</span>
+      <input [(ngModel)]="name" name="name" type="text">
+    </label>
+    <label for="age">
+      <span class="title">Age:</span>
+      <input [(ngModel)]="age" min="1" name="age" type="number">
+    </label>
+    <label for="email">
+      <span class="title">Email:</span>
+      <input [(ngModel)]="email" name="email" type="email">
+    </label>
+  </form>
+
+  <app-button (btnClick)="addUser()"></app-button>
+</div>

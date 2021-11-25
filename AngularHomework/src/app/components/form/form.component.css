@@ -1,0 +1,38 @@
+input {
+  outline: none;
+  font-size: 1rem;
+  padding: 5px 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  font-family: Inter, sans-serif;
+  color: #101010;
+  transition: 500ms cubic-bezier(.05,.68,.34,.99);
+  font-weight: normal;
+}
+
+input:focus {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+
+.title {
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  padding-bottom: 5px;
+  color: #313131;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 30%;
+  height: max-content;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
