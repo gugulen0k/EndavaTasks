@@ -1,7 +1,15 @@
 import './style.css'
+import icon from './icon.svg'
+import background from './background.jpg'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import * as dat from 'dat.gui'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+
+const threeJsIcon = document.querySelector('.icon')
+threeJsIcon.src = icon;
 
 // Loading
 const textureLoader = new THREE.TextureLoader()
@@ -181,3 +189,5 @@ const tick = () =>
 }
 
 tick()
+
+AOS.init();
